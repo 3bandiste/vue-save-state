@@ -1,7 +1,7 @@
 {
-  "name": "vue-save-state",
+  "name": "vue-save-state-session",
   "version": "1.2.1",
-  "description": "A Vue mixin to save the state of a component to local storage",
+  "description": "A Vue mixin to save the state of a component to local or session storage",
   "main": "dist/save-state.js",
   "jsnext:main": "src/save-state.js",
   "scripts": {
@@ -12,23 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/spatie/vue-save-state.git"
+    "url": "https://github.com/3bandiste/vue-save-state-session"
   },
   "keywords": [
-    "spatie",
     "vue",
     "state",
     "save",
     "restore",
     "local",
+    "session",
     "storage"
   ],
-  "author": "Freek Van der Herten",
+  "author": "Eric Tromas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spatie/vue-save-state/issues"
+    "url": "https://github.com/3bandiste/vue-save-state-session/issues"
   },
-  "homepage": "https://github.com/spatie/vue-save-state",
+  "homepage": "https://github.com/3bandiste/vue-save-state-session",
   "dependencies": {
     "lodash": "^4.0.0"
   },
