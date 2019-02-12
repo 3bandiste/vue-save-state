@@ -1,34 +1,17 @@
-# A Vue mixin to save the state of a component to local storage
+# A Vue mixin to save the state of a component to local or session storage
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/vue-save-state.svg?style=flat-square)](https://npmjs.com/package/vue-save-state)
+[![Latest Version on NPM](https://img.shields.io/npm/v/vue-save-state-session.svg?style=flat-square)](https://npmjs.com/package/vue-save-state-session)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/spatie/vue-save-state/master.svg?style=flat-square)](https://travis-ci.org/spatie/vue-save-state)
-[![npm](https://img.shields.io/npm/dt/vue-save-state.svg?style=flat-square)](https://npmjs.com/package/vue-save-state)
+[![npm](https://img.shields.io/npm/dt/vue-save-state-session.svg?style=flat-square)](https://npmjs.com/package/vue-save-state-session)
 
-This package provides a `SaveState` mixin that automatically saves any change in the state of your component to localStorage. The next time that component gets initialized it will restore its state from the saved values in local storage.
-
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
-
-## Postcardware
-
-You're free to use this package (it's [MIT-licensed](LICENSE.md)), but if it makes it to your production environment we highly apprecatie you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
-
-All postcards are published [on our website](https://spatie.be/en/opensource/postcards).
+This package provides a `SaveState` mixin that automatically saves any change in the state of your component to localStorage. The next time that component gets initialized it will restore its state from the saved values in local or session storage.
 
 ## Install
 
-You can install the package via yarn:
+You can install the package via npm:
 
 ```bash
-yarn add vue-save-state
-```
-
-or npm
-
-```bash
-npm install vue-save-state
+npm install -save vue-save-state-session
 ```
 
 ## Usage
@@ -36,7 +19,7 @@ npm install vue-save-state
 In order to save the state of your component you'll need to add the `SaveState` mixin:
 
 ```js
-import saveState from 'vue-save-state';
+import saveState from 'vue-save-state-session';
 
 export default {
 
@@ -75,7 +58,7 @@ With these steps done any change to the state of your component will get written
 There's also a configuration option to determine which properties of the state should be saved/restored:
 
 ```js
-import saveState from 'vue-save-state';
+import saveState from 'vue-save-state-session';
 
 export default {
     
@@ -97,7 +80,7 @@ With this configuration only the `title` and `text` properties of your state wil
 Alternatively you could specify which fields to ignore:
 
 ```js
-import saveState from 'vue-save-state';
+import saveState from 'vue-save-state-session';
 
 export default {
 
@@ -122,7 +105,7 @@ In this scenario all fields except for the `title` property in your state will g
 If you want to transform the values stored in local storage before loading the into the state of the component add an `onLoad` function to the object return by `getSaveStateConfig`.
 
 ```js
-import saveState from 'vue-save-state';
+import saveState from 'vue-save-state-session';
 
 export default {
 
@@ -144,7 +127,7 @@ export default {
 ## Use sessionStorage instead of localStorage
 
 ```js
-import saveState from 'vue-save-state';
+import saveState from 'vue-save-state-session';
 
 export default {
 
@@ -182,11 +165,9 @@ If you discover any security related issues, please contact [Freek Van der Herte
 
 ## Credits
 
+- Eric Tromas (eric.tromas@gmail.com)
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
-
-## About Spatie
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 
 ## License
 
