@@ -144,7 +144,28 @@ export default {
     },
 }
 ```
+## Disable
 
+Add ``dontSaveState`` property if you wish to temporarily disable the saveState function
+```js
+import saveState from 'vue-save-state-session';
+
+export default {
+
+    // ...
+
+    methods: {
+
+        getSaveStateConfig() {
+            return {
+                'cacheKey': 'nameOfYourComponent',
+                'cacheType': 'sessionStorage',
+                'dontSaveState': true
+            };
+        },
+    },
+}
+```
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
